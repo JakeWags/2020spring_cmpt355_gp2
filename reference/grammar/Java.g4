@@ -8,12 +8,15 @@ grammar Java;
 // The characters that are valid in Java identifiers are a very long list, so keep them in a separate file
 import JavaIdentifierCharacters;
 
+/* ---- Parser rules ---- */
+
 test
     : (KEYWORD | IDENTIFIER | INT_LITERAL | LONG_LITERAL | DOUBLE_LITERAL | FLOAT_LITERAL | STRING_LITERAL
         | SEPARATOR | OPERATOR | BOOLEAN_LITERAL | NULL_LITERAL)*
     ;
 
 /* ---- Lexer rules ---- */
+
 KEYWORD
     // keywords
     : 'abstract' | 'assert'       | 'break'      | 'case'   | 'catch'      | 'class'     | 'const'    | 'continue'
